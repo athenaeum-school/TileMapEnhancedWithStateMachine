@@ -1,5 +1,5 @@
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+#ifndef __GameLayer_SCENE_H__
+#define __GameLayer_SCENE_H__
 
 #include "cocos2d.h"
 #include "HudLayer.h"
@@ -9,9 +9,10 @@
 
 using namespace cocos2d;
 
-class HelloWorld : public cocos2d::CCLayer
+class GameLayer : public cocos2d::CCLayer
 {
 private:
+    
     CCTMXTiledMap *_tileMap;
     
     CCTMXLayer *_background;
@@ -32,12 +33,24 @@ private:
     int _numCollected;
     
 public:
+    
+    static GameLayer* s_pInstance;
+    static GameLayer* Instance()
+    {
+        if(s_pInstance == 0)
+        {
+            s_pInstance = new GameLayer();
+            return s_pInstance;
+        }
+        
+        return s_pInstance;
+    }
+    
     // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
     virtual bool init();
     
     // there's no 'id' in cpp, so we recommend to return the class instance pointer
     static CCScene* scene();
-    static HelloWorld* s_pInstance;
     
     // a selector callback
     void menuCloseCallback(CCObject* pSender);
@@ -54,6 +67,8 @@ public:
     
     CCPoint tileCoordForPosition(CCPoint position);
 
+    void update (float dt);
+    
     enum Status {
         kNormal = 0,
         kAlarm,
@@ -61,7 +76,7 @@ public:
     };
     
     // preprocessor macro for "static create()" constructor ( node() deprecated )
-    CREATE_FUNC(HelloWorld);
+    CREATE_FUNC(GameLayer);
 };
 
-#endif // __HELLOWORLD_SCENE_H__
+#endif // __GameLayer_SCENE_H__

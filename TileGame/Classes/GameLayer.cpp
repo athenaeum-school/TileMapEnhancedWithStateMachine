@@ -1,16 +1,18 @@
-#include "HelloWorldScene.h"
+#include "GameLayer.h"
 #include "SimpleAudioEngine.h"
 #include "ObjectManager.h"
 
 using namespace cocos2d;
 
-CCScene* HelloWorld::scene()
+GameLayer* GameLayer::s_pInstance = 0;
+
+CCScene* GameLayer::scene()
 {
     // 'scene' is an autorelease object
     CCScene *scene = CCScene::create();
     
     // 'layer' is an autorelease object
-    HelloWorld *layer = HelloWorld::create();
+    GameLayer *layer = GameLayer::create();
     //GameManager * game = Game::Instance()->create();
     
     // add layer as a child to scene
@@ -30,14 +32,14 @@ CCScene* HelloWorld::scene()
 }
 
 // on "init" you need to initialize your instance
-bool HelloWorld::init()
+bool GameLayer::init()
 {
     if ( !CCLayer::init() )
     {
         return false;
     }
     
-    HelloWorld::s_pInstance = this;
+    GameLayer::s_pInstance = this;
     
     Game::Instance()->getStateMachine()->pushState(new NormalState());
     
@@ -89,10 +91,13 @@ bool HelloWorld::init()
     
     this->setTouchEnabled(true);
     
+    //create main loop
+    this->schedule(schedule_selector(GameLayer::update));
+    
     return true;
 }
 
-void HelloWorld::setViewPointCenter(CCPoint position)
+void GameLayer::setViewPointCenter(CCPoint position)
 {
     
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
@@ -110,17 +115,17 @@ void HelloWorld::setViewPointCenter(CCPoint position)
 
 #pragma mark - handle touches
 
-void HelloWorld::registerWithTouchDispatcher()
+void GameLayer::registerWithTouchDispatcher()
 {
     CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
 }
 
-bool HelloWorld::ccTouchBegan(CCTouch *touch, CCEvent *event)
+bool GameLayer::ccTouchBegan(CCTouch *touch, CCEvent *event)
 {
     return true;
 }
 
-void HelloWorld::setPlayerPosition(CCPoint position)
+void GameLayer::setPlayerPosition(CCPoint position)
 {
     CCPoint tileCoord = this->tileCoordForPosition(position);
     int tileGid = _meta->tileGIDAt(tileCoord);
@@ -148,7 +153,7 @@ void HelloWorld::setPlayerPosition(CCPoint position)
     CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("move.caf");
 }
 
-void HelloWorld::ccTouchEnded(CCTouch *touch, CCEvent *event)
+void GameLayer::ccTouchEnded(CCTouch *touch, CCEvent *event)
 {
     CCPoint touchLocation = touch->getLocationInView();
     touchLocation = CCDirector::sharedDirector()->convertToGL(touchLocation);
@@ -183,9 +188,15 @@ void HelloWorld::ccTouchEnded(CCTouch *touch, CCEvent *event)
     this->setViewPointCenter(_normalState->getPosition());
 }
 
-CCPoint HelloWorld::tileCoordForPosition(CCPoint position)
+CCPoint GameLayer::tileCoordForPosition(CCPoint position)
 {
     int x = position.x / _tileMap->getTileSize().width;
     int y = ((_tileMap->getMapSize().height * _tileMap->getTileSize().height) - position.y) / _tileMap->getTileSize().height;
     return ccp(x, y);
+}
+
+void GameLayer::update (float dt) {
+	
+    Game::Instance()->getStateMachine()->update();
+	
 }

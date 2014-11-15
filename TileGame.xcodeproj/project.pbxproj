@@ -265,7 +265,7 @@
 		EB1C92021755387100198623 /* cpSweep1D.c in Sources */ = {isa = PBXBuildFile; fileRef = EB1C92011755387100198623 /* cpSweep1D.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EB1C92041755387100198623 /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = EB1C92031755387100198623 /* cpVect.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EB1C920B1755387100198623 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB1C920A1755387100198623 /* AppDelegate.cpp */; };
-		EB1C920E1755387100198623 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB1C920D1755387100198623 /* HelloWorldScene.cpp */; };
+		EB1C920E1755387100198623 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB1C920D1755387100198623 /* GameLayer.cpp */; };
 		EB1C921D17553C5F00198623 /* hit.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB1C921517553C5F00198623 /* hit.caf */; };
 		EB1C921E17553C5F00198623 /* meta_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1C921617553C5F00198623 /* meta_tiles.png */; };
 		EB1C921F17553C5F00198623 /* move.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB1C921717553C5F00198623 /* move.caf */; };
@@ -844,8 +844,8 @@
 		EB1C92071755387100198623 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		EB1C92091755387100198623 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		EB1C920A1755387100198623 /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
-		EB1C920C1755387100198623 /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		EB1C920D1755387100198623 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		EB1C920C1755387100198623 /* GameLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = Classes/GameLayer.h; sourceTree = "<group>"; };
+		EB1C920D1755387100198623 /* GameLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = Classes/GameLayer.cpp; sourceTree = "<group>"; };
 		EB1C921517553C5F00198623 /* hit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hit.caf; sourceTree = "<group>"; };
 		EB1C921617553C5F00198623 /* meta_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meta_tiles.png; sourceTree = "<group>"; };
 		EB1C921717553C5F00198623 /* move.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = move.caf; sourceTree = "<group>"; };
@@ -2013,8 +2013,8 @@
 			children = (
 				EB1C92091755387100198623 /* AppDelegate.h */,
 				EB1C920A1755387100198623 /* AppDelegate.cpp */,
-				EB1C920C1755387100198623 /* HelloWorldScene.h */,
-				EB1C920D1755387100198623 /* HelloWorldScene.cpp */,
+				EB1C920C1755387100198623 /* GameLayer.h */,
+				EB1C920D1755387100198623 /* GameLayer.cpp */,
 				EB92A742175674FD00528C23 /* HudLayer.h */,
 				EB92A741175674FD00528C23 /* HudLayer.cpp */,
 				EBB07D511A166C7A007A5A17 /* NormalState.cpp */,
@@ -2368,7 +2368,7 @@
 				EB1C92021755387100198623 /* cpSweep1D.c in Sources */,
 				EB1C92041755387100198623 /* cpVect.c in Sources */,
 				EB1C920B1755387100198623 /* AppDelegate.cpp in Sources */,
-				EB1C920E1755387100198623 /* HelloWorldScene.cpp in Sources */,
+				EB1C920E1755387100198623 /* GameLayer.cpp in Sources */,
 				EB92A743175674FD00528C23 /* HudLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
