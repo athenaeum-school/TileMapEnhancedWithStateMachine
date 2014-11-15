@@ -52,6 +52,6 @@ void StateMachine::popState() {
 }
 
 void StateMachine::update() {
-    
+    m_gameStates.back()->stateUpdate();
 }
 
