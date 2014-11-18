@@ -41,10 +41,20 @@ void ObjectManager::setGameObjectPosition(const cocos2d::CCPoint &pts)
         (*it)->setPosition(pts);
 }
 
+void ObjectManager::setTileMap(cocos2d::CCTMXTiledMap* tileMap)
+{
+    this->_tileMap = tileMap;
+}
+
+cocos2d::CCTMXTiledMap* ObjectManager::getTileMap()
+{
+    return this->_tileMap;
+}
+
 void ObjectManager::setGameObjectStrategy()
 {
-    for (std::vector<GameObject*>::iterator it = m_gameObjects.begin() ; it != m_gameObjects.end(); ++it)
-        (*it)->setStrategy();
+    //for (std::vector<GameObject*>::iterator it = m_gameObjects.begin() ; it != m_gameObjects.end(); ++it)
+    //    (*it)->setStrategy();
 }
 
 void ObjectManager::addGameObject(GameObject* sprite)
@@ -52,7 +62,7 @@ void ObjectManager::addGameObject(GameObject* sprite)
     m_gameObjects.push_back(sprite);
 }
 
-void ObjectManager::addGameObjectMap(std::string id, GameObject* sprite)
+void ObjectManager::addGameObjectMap(const std::string id, GameObject* sprite)
 {
     m_gameObjectMap.insert(pair<std::string, GameObject*>(id, sprite));
 }

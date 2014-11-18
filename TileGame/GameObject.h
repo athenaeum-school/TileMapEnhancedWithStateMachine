@@ -15,10 +15,9 @@
 class GameObject : public cocos2d::CCSprite
 {
 public:
-    virtual void setStrategy();
-    virtual void findPlayer();
+    //virtual void setStrategy();
 private:
-    std::string strategy;
+    //std::string strategy;
     
 };
 

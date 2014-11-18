@@ -24,38 +24,40 @@ NormalState::~NormalState() {
 void NormalState::stateUpdate() {
     std::vector<GameObject*> gameObjects = Game::Instance()->getGameObjects();
     for (std::vector<GameObject*>::iterator it = gameObjects.begin() ; it != gameObjects.end(); ++it){
-        float x = (*it)->getPositionX();
-        float y = (*it)->getPositionY();
+        //float x = (*it)->getPositionX();
+        //float y = (*it)->getPositionY();
     }
 }
 
 void NormalState::onInputEvent(CCPoint* diff) {
     
-    playerPos = Game::Instance()->getGameObjects()->findPlayer()->getPosition();
+    GameObject* player = Game::Instance()->findGameObject("player");
+    CCPoint playerPos = player->getPosition();
     
     if(diff){
         if ( abs(diff->x) > abs(diff->y) ) {
             if (diff->x > 0) {
                 
-                playerPos.x += _tileMap->getTileSize().width;
+                playerPos.x += Game::Instance()->getTileMap()->getTileSize().width;
             } else {
-                playerPos.x -= _tileMap->getTileSize().width;
+                playerPos.x -= Game::Instance()->getTileMap()->getTileSize().width;
             }
         } else {
-            if (diff.y > 0) {
-                playerPos.y += _tileMap->getTileSize().height;
+            if (diff->y > 0) {
+                playerPos.y += Game::Instance()->getTileMap()->getTileSize().height;
             } else {
-                playerPos.y -= _tileMap->getTileSize().height;
+                playerPos.y -= Game::Instance()->getTileMap()->getTileSize().height;
             }
         }
         
         // safety check on the bounds of the map
-        if (playerPos.x <= (_tileMap->getMapSize().width * _tileMap->getTileSize().width) &&
-            playerPos.y <= (_tileMap->getMapSize().height * _tileMap->getTileSize().height) &&
+        if (playerPos.x <= (Game::Instance()->getTileMap()->getMapSize().width * Game::Instance()->getTileMap()->getTileSize().width) &&
+            playerPos.y <= (Game::Instance()->getTileMap()->getMapSize().height * Game::Instance()->getTileMap()->getTileSize().height) &&
             playerPos.y >= 0 &&
             playerPos.x >= 0 )
         {
-            this->setPlayerPosition(playerPos);
+            player->setPosition(playerPos);
+            //this->setPlayerPosition(playerPos);
         }
     }
 }

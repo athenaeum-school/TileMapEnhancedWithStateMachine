@@ -14,7 +14,6 @@
 
 class Player : public GameObject
 {
-public:
     
 };
 

@@ -35,7 +35,7 @@ void AlarmState::stateUpdate() {
     
 }
 
-void AlarmState::onInputEvent() {
+void AlarmState::onInputEvent(CCPoint* pts) {
     
 }
 

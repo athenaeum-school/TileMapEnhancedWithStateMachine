@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/NormalState.cpp"
-            timestampString = "437709112.309875"
+            timestampString = "438015280.070523"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "NormalState::onStateEnter()"
             landmarkType = "5">
          </BreakpointContent>
@@ -22,16 +22,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TileGame/NormalState.cpp"
-            timestampString = "437981252.330682"
+            filePath = "TileGame/Classes/GameLayer.cpp"
+            timestampString = "438016488.711276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "NormalState::NormalState()"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
+            landmarkName = "GameLayer::ccTouchEnded(CCTouch *touch, CCEvent *event)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TileGame/Classes/GameLayer.cpp"
+            timestampString = "438016553.433346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "GameLayer::ccTouchEnded(CCTouch *touch, CCEvent *event)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

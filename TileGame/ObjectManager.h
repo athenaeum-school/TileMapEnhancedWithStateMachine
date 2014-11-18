@@ -36,6 +36,7 @@ public:
     void handleEvents(CCPoint* pts);
     
     void setGameObjectPosition(const cocos2d::CCPoint &pts);
+    void setTileMap(cocos2d::CCTMXTiledMap* tileMap);
     void setGameObjectStrategy();
     
     void addGameObjectMap(std::string id, GameObject* sprite);
@@ -44,6 +45,7 @@ public:
     std::vector<GameObject*> getGameObjects();
     std::map<std::string, GameObject*> getGameObjectMap();
     GameObject* findGameObject(std::string id);
+    cocos2d::CCTMXTiledMap* getTileMap();
     
     StateMachine* getStateMachine() { return m_pStateMachine; }
     
@@ -63,6 +65,8 @@ private:
     
     std::vector<GameObject*> m_gameObjects;
     std::map<std::string, GameObject*> m_gameObjectMap;
+    
+    cocos2d::CCTMXTiledMap *_tileMap;
     
     int m_currentLevel;
 

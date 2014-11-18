@@ -73,18 +73,21 @@ bool GameLayer::init()
     //enum Status normalStatus = kNormal;
    //enum Status alarmStatus = kAlarm;
     
-    Player* _player = new Player();
+    _player = new Player();
     _player->initWithFile("Player.png");
     _player->setPosition(ccp(x,y));
+    _player->retain();
     //_player->setTag(normalStatus);
     
     this->addChild(_player);
     
-    Enemy* _enemy = new Enemy();
-    this->addChild(_enemy);
+    //Enemy* _enemy = new Enemy();
+    //this->addChild(_enemy);
     
+    Game::Instance()->addGameObjectMap("player", _player);
+    Game::Instance()->setTileMap(_tileMap);
     Game::Instance()->addGameObject(_player);
-    Game::Instance()->addGameObject(_enemy);
+    //Game::Instance()->addGameObject(_enemy);
     
     /*
     _normalState = new NormalState();
@@ -176,7 +179,8 @@ void GameLayer::ccTouchEnded(CCTouch *touch, CCEvent *event)
     CCPoint touchLocation = touch->getLocationInView();
     touchLocation = CCDirector::sharedDirector()->convertToGL(touchLocation);
     touchLocation = this->convertToNodeSpace(touchLocation);
-    
+
+    //float x = _player->getPositionX();
     CCPoint playerPos = _player->getPosition();
     CCPoint diff = ccpSub(touchLocation, playerPos);
     

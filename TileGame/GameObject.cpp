@@ -8,7 +8,8 @@
 
 #include "GameObject.h"
 
-void GameObject::setStrategy()
+/* void GameObject::setStrategy()
 {
     
 }
+ */
