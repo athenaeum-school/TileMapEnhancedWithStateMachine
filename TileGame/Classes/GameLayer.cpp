@@ -70,13 +70,13 @@ bool GameLayer::init()
     int x = ((CCString)*spawnPoint->valueForKey("x")).intValue();
     int y = ((CCString)*spawnPoint->valueForKey("y")).intValue();
     
-    enum Status normalStatus = kNormal;
-    enum Status alarmStatus = kAlarm;
+    //enum Status normalStatus = kNormal;
+   //enum Status alarmStatus = kAlarm;
     
     Player* _player = new Player();
     _player->initWithFile("Player.png");
     _player->setPosition(ccp(x,y));
-    _player->setTag(normalStatus);
+    //_player->setTag(normalStatus);
     
     this->addChild(_player);
     

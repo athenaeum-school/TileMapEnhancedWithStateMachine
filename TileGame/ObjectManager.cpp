@@ -47,10 +47,14 @@ void ObjectManager::setGameObjectStrategy()
         (*it)->setStrategy();
 }
 
-bool ObjectManager::addGameObject(GameObject* sprite)
+void ObjectManager::addGameObject(GameObject* sprite)
 {
     m_gameObjects.push_back(sprite);
-    return true;
+}
+
+void ObjectManager::addGameObjectMap(std::string id, GameObject* sprite)
+{
+    m_gameObjectMap.insert(pair<std::string, GameObject*>(id, sprite));
 }
 
 std::vector<GameObject*> ObjectManager::getGameObjects()
@@ -58,9 +62,14 @@ std::vector<GameObject*> ObjectManager::getGameObjects()
     return m_gameObjects;
 }
 
-GameObject* ObjectManager::findGameObject(std::string tag)
+GameObject* ObjectManager::findGameObject(std::string id)
 {
-    
+    std::map<std::string, GameObject*>::iterator it = m_gameObjectMap.find(id);
+    if(it != m_gameObjectMap.end()){
+        return it->second;
+    } else {
+        return 0;
+    }
 }
 
 void ObjectManager::setCurrentLevel(int currentLevel)

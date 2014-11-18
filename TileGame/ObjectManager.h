@@ -11,6 +11,7 @@
 
 #include "StateMachine.h"
 #include <vector>
+#include <map>
 #include <cocos2d.h>
 #include "GameObject.h"
 
@@ -37,10 +38,12 @@ public:
     void setGameObjectPosition(const cocos2d::CCPoint &pts);
     void setGameObjectStrategy();
     
-    bool addGameObject(GameObject* sprite);
+    void addGameObjectMap(std::string id, GameObject* sprite);
+    void addGameObject(GameObject* sprite);
     
     std::vector<GameObject*> getGameObjects();
-    GameObject* findGameObject(std::string tag);
+    std::map<std::string, GameObject*> getGameObjectMap();
+    GameObject* findGameObject(std::string id);
     
     StateMachine* getStateMachine() { return m_pStateMachine; }
     
@@ -58,9 +61,8 @@ private:
     StateMachine* m_pStateMachine;
     static ObjectManager* s_pInstance;
     
-    //CCSprite* m_obj;
     std::vector<GameObject*> m_gameObjects;
-    //cocos2d::CCArray* m_Sprites;
+    std::map<std::string, GameObject*> m_gameObjectMap;
     
     int m_currentLevel;
 
