@@ -9,7 +9,6 @@
 #include "AlarmState.h"
 #include "ObjectManager.h"
 #include "NormalState.h"
-#include "HelloWorldScene.h"
 
 const std::string AlarmState::s_alarmID = "ALARM";
 
@@ -33,6 +32,10 @@ AlarmState::~AlarmState() {
 }
 
 void AlarmState::stateUpdate() {
+    
+}
+
+void AlarmState::onInputEvent() {
     
 }
 

@@ -6,6 +6,8 @@
 #include "ObjectManager.h"
 #include "NormalState.h"
 #include "AlarmState.h"
+#include "Player.h"
+#include "Enemy.h"
 
 using namespace cocos2d;
 
@@ -17,11 +19,12 @@ private:
     
     CCTMXLayer *_background;
 
-    //CCSprite *_player;
+    Player * _player;
+    Enemy * _enemy;
+    
     NormalState *_normalState;
     AlarmState *_alarmState;
 
-    
     CCTMXLayer *_meta;
     
     CCTMXLayer *_foreground;

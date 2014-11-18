@@ -22,6 +22,7 @@ public:
     void changeState(GameState* pState);
     void popState();
     void update();
+    void onEvent(CCPoint * pts);
     
 protected:
 private:

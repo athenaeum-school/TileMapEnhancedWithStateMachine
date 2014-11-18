@@ -11,6 +11,7 @@
 
 #include "GameState.h"
 #include <cocos2d.h>
+#include "ObjectManager.h"
 
 using namespace cocos2d;
 
@@ -20,6 +21,7 @@ public:
     virtual void stateUpdate();
     virtual bool onStateEnter();
     virtual bool onStateExit();
+    virtual void onInputEvent(CCPoint* pts);
     
     virtual std::string getStateID() { return s_normalID; }
     

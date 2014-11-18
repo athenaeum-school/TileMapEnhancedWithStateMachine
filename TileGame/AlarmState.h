@@ -20,6 +20,7 @@ public:
     virtual void stateUpdate();
     virtual bool onStateEnter();
     virtual bool onStateExit();
+    virtual void onInputEvent(CCPoint* pts);
     
     virtual std::string getStateID() { return s_alarmID; }
     

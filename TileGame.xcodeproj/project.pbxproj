@@ -280,6 +280,9 @@
 		EBB07D5B1A1674DD007A5A17 /* AlarmState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBB07D591A1674DD007A5A17 /* AlarmState.cpp */; };
 		EBB07D5E1A1674ED007A5A17 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBB07D5C1A1674ED007A5A17 /* StateMachine.cpp */; };
 		EBB07D611A167E7B007A5A17 /* ObjectManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBB07D5F1A167E7B007A5A17 /* ObjectManager.cpp */; };
+		EBF12C851A1B0A28008438A0 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF12C831A1B0A28008438A0 /* GameObject.cpp */; };
+		EBF12C881A1B0B28008438A0 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF12C861A1B0B28008438A0 /* Player.cpp */; };
+		EBF12C8B1A1B0B36008438A0 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF12C891A1B0B36008438A0 /* Enemy.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -866,6 +869,12 @@
 		EBB07D5D1A1674ED007A5A17 /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
 		EBB07D5F1A167E7B007A5A17 /* ObjectManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectManager.cpp; sourceTree = "<group>"; };
 		EBB07D601A167E7B007A5A17 /* ObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectManager.h; sourceTree = "<group>"; };
+		EBF12C831A1B0A28008438A0 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		EBF12C841A1B0A28008438A0 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		EBF12C861A1B0B28008438A0 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		EBF12C871A1B0B28008438A0 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		EBF12C891A1B0B36008438A0 /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
+		EBF12C8A1A1B0B36008438A0 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2027,6 +2036,12 @@
 				EBB07D5D1A1674ED007A5A17 /* StateMachine.h */,
 				EBB07D5F1A167E7B007A5A17 /* ObjectManager.cpp */,
 				EBB07D601A167E7B007A5A17 /* ObjectManager.h */,
+				EBF12C831A1B0A28008438A0 /* GameObject.cpp */,
+				EBF12C841A1B0A28008438A0 /* GameObject.h */,
+				EBF12C861A1B0B28008438A0 /* Player.cpp */,
+				EBF12C871A1B0B28008438A0 /* Player.h */,
+				EBF12C891A1B0B36008438A0 /* Enemy.cpp */,
+				EBF12C8A1A1B0B36008438A0 /* Enemy.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2165,6 +2180,7 @@
 				EB1C8F2C1755386600198623 /* cocos2d.cpp in Sources */,
 				EBB07D531A166C7A007A5A17 /* NormalState.cpp in Sources */,
 				EB1C8F2F1755386600198623 /* CCDrawingPrimitives.cpp in Sources */,
+				EBF12C8B1A1B0B36008438A0 /* Enemy.cpp in Sources */,
 				EB1C8F321755386600198623 /* CCDrawNode.cpp in Sources */,
 				EB1C8F361755386600198623 /* CCGrabber.cpp in Sources */,
 				EB1C8F391755386600198623 /* CCGrid.cpp in Sources */,
@@ -2212,11 +2228,13 @@
 				EB1C8FD61755386800198623 /* CCCommon.mm in Sources */,
 				EB1C8FD81755386800198623 /* CCDevice.mm in Sources */,
 				EB1C8FDB1755386800198623 /* CCDirectorCaller.mm in Sources */,
+				EBF12C881A1B0B28008438A0 /* Player.cpp in Sources */,
 				EB1C8FDE1755386800198623 /* CCEGLView.mm in Sources */,
 				EB1C8FE11755386800198623 /* CCES2Renderer.m in Sources */,
 				EB1C8FE51755386800198623 /* CCFileUtilsIOS.mm in Sources */,
 				EB1C8FE81755386800198623 /* CCImage.mm in Sources */,
 				EB1C8FEA1755386800198623 /* CCLock.cpp in Sources */,
+				EBF12C851A1B0A28008438A0 /* GameObject.cpp in Sources */,
 				EB1C8FEF1755386800198623 /* CCThread.mm in Sources */,
 				EB1C8FF21755386900198623 /* EAGLView.mm in Sources */,
 				EB1C8FF71755386900198623 /* AccelerometerSimulation.m in Sources */,

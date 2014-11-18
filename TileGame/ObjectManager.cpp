@@ -35,6 +35,34 @@ bool ObjectManager::init()
     return true;
 }
 
+void ObjectManager::setGameObjectPosition(const cocos2d::CCPoint &pts)
+{
+    for (std::vector<GameObject*>::iterator it = m_gameObjects.begin() ; it != m_gameObjects.end(); ++it)
+        (*it)->setPosition(pts);
+}
+
+void ObjectManager::setGameObjectStrategy()
+{
+    for (std::vector<GameObject*>::iterator it = m_gameObjects.begin() ; it != m_gameObjects.end(); ++it)
+        (*it)->setStrategy();
+}
+
+bool ObjectManager::addGameObject(GameObject* sprite)
+{
+    m_gameObjects.push_back(sprite);
+    return true;
+}
+
+std::vector<GameObject*> ObjectManager::getGameObjects()
+{
+    return m_gameObjects;
+}
+
+GameObject* ObjectManager::findGameObject(std::string tag)
+{
+    
+}
+
 void ObjectManager::setCurrentLevel(int currentLevel)
 {
     m_currentLevel = currentLevel;
@@ -45,6 +73,11 @@ void ObjectManager::setCurrentLevel(int currentLevel)
 void ObjectManager::update()
 {
     m_pStateMachine->update();
+}
+
+void ObjectManager::handleEvents(CCPoint* pts)
+{
+    m_pStateMachine->onEvent(pts);
 }
 
 void ObjectManager::clean()

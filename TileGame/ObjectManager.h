@@ -12,6 +12,7 @@
 #include "StateMachine.h"
 #include <vector>
 #include <cocos2d.h>
+#include "GameObject.h"
 
 class ObjectManager : public cocos2d::CCLayer
 {
@@ -31,6 +32,15 @@ public:
     bool init();
     void update();
     void clean();
+    void handleEvents(CCPoint* pts);
+    
+    void setGameObjectPosition(const cocos2d::CCPoint &pts);
+    void setGameObjectStrategy();
+    
+    bool addGameObject(GameObject* sprite);
+    
+    std::vector<GameObject*> getGameObjects();
+    GameObject* findGameObject(std::string tag);
     
     StateMachine* getStateMachine() { return m_pStateMachine; }
     
@@ -49,7 +59,8 @@ private:
     static ObjectManager* s_pInstance;
     
     //CCSprite* m_obj;
-    //std::vector<CCSprite*> m_refSprite;
+    std::vector<GameObject*> m_gameObjects;
+    //cocos2d::CCArray* m_Sprites;
     
     int m_currentLevel;
 

@@ -55,3 +55,7 @@ void StateMachine::update() {
     m_gameStates.back()->stateUpdate();
 }
 
+void StateMachine::onEvent(CCPoint* pts) {
+    m_gameStates.back()->onInputEvent(pts);
+}
+

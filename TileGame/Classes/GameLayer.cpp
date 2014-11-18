@@ -73,6 +73,20 @@ bool GameLayer::init()
     enum Status normalStatus = kNormal;
     enum Status alarmStatus = kAlarm;
     
+    Player* _player = new Player();
+    _player->initWithFile("Player.png");
+    _player->setPosition(ccp(x,y));
+    _player->setTag(normalStatus);
+    
+    this->addChild(_player);
+    
+    Enemy* _enemy = new Enemy();
+    this->addChild(_enemy);
+    
+    Game::Instance()->addGameObject(_player);
+    Game::Instance()->addGameObject(_enemy);
+    
+    /*
     _normalState = new NormalState();
     _normalState->initWithFile("Player.png");
     _normalState->setPosition(ccp(x,y));
@@ -84,10 +98,14 @@ bool GameLayer::init()
     _alarmState = new AlarmState();
     _alarmState->initWithFile("Player.png");
     _alarmState->setPosition(ccp(x,y));
+    //_alarmState->cocos2d::CCRGBAProtocol::setColor(<#const ccColor3B &color#>);
     _alarmState->setTag(alarmStatus);
     
-    //this->addChild(_normalState);
-    this->setViewPointCenter(_normalState->getPosition());
+    
+    this->addChild(_normalState);
+    */
+    
+    this->setViewPointCenter(_player->getPosition());
     
     this->setTouchEnabled(true);
     
@@ -149,7 +167,7 @@ void GameLayer::setPlayerPosition(CCPoint position)
             }
         }
     }
-    _normalState->setPosition(position);
+    _player->setPosition(position);
     CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("move.caf");
 }
 
@@ -159,33 +177,12 @@ void GameLayer::ccTouchEnded(CCTouch *touch, CCEvent *event)
     touchLocation = CCDirector::sharedDirector()->convertToGL(touchLocation);
     touchLocation = this->convertToNodeSpace(touchLocation);
     
-    CCPoint playerPos = _normalState->getPosition();
+    CCPoint playerPos = _player->getPosition();
     CCPoint diff = ccpSub(touchLocation, playerPos);
     
-    if ( abs(diff.x) > abs(diff.y) ) {
-        if (diff.x > 0) {
-            playerPos.x += _tileMap->getTileSize().width;
-        } else {
-            playerPos.x -= _tileMap->getTileSize().width;
-        }
-    } else {
-        if (diff.y > 0) {
-            playerPos.y += _tileMap->getTileSize().height;
-        } else {
-            playerPos.y -= _tileMap->getTileSize().height;
-        }
-    }
+    Game::Instance()->handleEvents(&diff);
     
-    // safety check on the bounds of the map
-    if (playerPos.x <= (_tileMap->getMapSize().width * _tileMap->getTileSize().width) &&
-        playerPos.y <= (_tileMap->getMapSize().height * _tileMap->getTileSize().height) &&
-        playerPos.y >= 0 &&
-        playerPos.x >= 0 )
-    {
-        this->setPlayerPosition(playerPos);
-    }
-    
-    this->setViewPointCenter(_normalState->getPosition());
+    this->setViewPointCenter(_player->getPosition());
 }
 
 CCPoint GameLayer::tileCoordForPosition(CCPoint position)
