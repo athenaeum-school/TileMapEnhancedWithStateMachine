@@ -15,6 +15,10 @@ const std::string NormalState::s_normalID = "NORMAL";
 
 NormalState::NormalState() {
     std::cout << "NormalState::NormalState() normal state constructor\n";
+    _tileWidth = Game::Instance()->getTileMap()->getTileSize().width;
+    _tileHeight = Game::Instance()->getTileMap()->getTileSize().height;
+    _mapWidth = Game::Instance()->getTileMap()->getMapSize().width;
+    _mapHeight = Game::Instance()->getTileMap()->getMapSize().height;
 }
 
 NormalState::~NormalState() {
@@ -31,35 +35,38 @@ void NormalState::stateUpdate() {
 
 void NormalState::onInputEvent(CCPoint* diff) {
     
-    GameObject* player = Game::Instance()->findGameObject("player");
+    Player* player = dynamic_cast<Player*>( Game::Instance()->findGameObject("player"));
     CCPoint playerPos = player->getPosition();
     
+    player->setPlayerPosition(diff, playerPos, _tileWidth,_tileHeight, _mapWidth, _mapHeight);
+    
+    /*
     if(diff){
         if ( abs(diff->x) > abs(diff->y) ) {
             if (diff->x > 0) {
                 
-                playerPos.x += Game::Instance()->getTileMap()->getTileSize().width;
+                playerPos.x += _tileWidth;
             } else {
-                playerPos.x -= Game::Instance()->getTileMap()->getTileSize().width;
+                playerPos.x -= _tileWidth;
             }
         } else {
             if (diff->y > 0) {
-                playerPos.y += Game::Instance()->getTileMap()->getTileSize().height;
+                playerPos.y += _tileHeight;
             } else {
-                playerPos.y -= Game::Instance()->getTileMap()->getTileSize().height;
+                playerPos.y -= _tileHeight;
             }
         }
         
         // safety check on the bounds of the map
-        if (playerPos.x <= (Game::Instance()->getTileMap()->getMapSize().width * Game::Instance()->getTileMap()->getTileSize().width) &&
-            playerPos.y <= (Game::Instance()->getTileMap()->getMapSize().height * Game::Instance()->getTileMap()->getTileSize().height) &&
+        if (playerPos.x <= (_mapWidth * _tileWidth) &&
+            playerPos.y <= (_mapHeight * _tileHeight) &&
             playerPos.y >= 0 &&
             playerPos.x >= 0 )
         {
             player->setPosition(playerPos);
-            //this->setPlayerPosition(playerPos);
         }
     }
+     */
 }
 
 bool NormalState::onStateEnter() {

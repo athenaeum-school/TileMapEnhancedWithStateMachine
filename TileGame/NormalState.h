@@ -12,6 +12,7 @@
 #include "GameState.h"
 #include <cocos2d.h>
 #include "ObjectManager.h"
+#include "Player.h"
 
 using namespace cocos2d;
 
@@ -29,7 +30,10 @@ public:
     ~NormalState();
     
 private:
-    
+    float _tileWidth;
+    float _tileHeight;
+    float _mapWidth;
+    float _mapHeight;
     static const std::string s_normalID;
     
 };
