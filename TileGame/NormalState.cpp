@@ -24,8 +24,10 @@ NormalState::~NormalState() {
 void NormalState::stateUpdate() {
     std::vector<GameObject*> gameObjects = Game::Instance()->getGameObjects();
     for (std::vector<GameObject*>::iterator it = gameObjects.begin() ; it != gameObjects.end(); ++it){
-        //float x = (*it)->getPositionX();
-        //float y = (*it)->getPositionY();
+        // ここで各ゲームオブジェクト＝NPCのアップデートを行います。
+        // 人工知能的な動作については
+        // Game::Instance()->getStateMachine()->changeState(new AlarmState());
+        // をお使いください。
     }
 }
 

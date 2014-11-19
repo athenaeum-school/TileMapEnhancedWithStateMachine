@@ -41,8 +41,6 @@ bool GameLayer::init()
     
     GameLayer::s_pInstance = this;
     
-    Game::Instance()->getStateMachine()->pushState(new NormalState());
-    
     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("pickup.caf");
     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("hit.caf");
     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("move.caf");
@@ -70,8 +68,7 @@ bool GameLayer::init()
     int x = ((CCString)*spawnPoint->valueForKey("x")).intValue();
     int y = ((CCString)*spawnPoint->valueForKey("y")).intValue();
     
-    //enum Status normalStatus = kNormal;
-   //enum Status alarmStatus = kAlarm;
+    Game::Instance()->getStateMachine()->pushState(new NormalState());
     
     _player = new Player();
     _player->initWithFile("Player.png");
@@ -88,25 +85,6 @@ bool GameLayer::init()
     Game::Instance()->setTileMap(_tileMap);
     Game::Instance()->addGameObject(_player);
     //Game::Instance()->addGameObject(_enemy);
-    
-    /*
-    _normalState = new NormalState();
-    _normalState->initWithFile("Player.png");
-    _normalState->setPosition(ccp(x,y));
-    _normalState->setTag(normalStatus);
-    
-    this->addChild(_normalState);
-    this->setViewPointCenter(_normalState->getPosition());
-    
-    _alarmState = new AlarmState();
-    _alarmState->initWithFile("Player.png");
-    _alarmState->setPosition(ccp(x,y));
-    //_alarmState->cocos2d::CCRGBAProtocol::setColor(<#const ccColor3B &color#>);
-    _alarmState->setTag(alarmStatus);
-    
-    
-    this->addChild(_normalState);
-    */
     
     this->setViewPointCenter(_player->getPosition());
     
