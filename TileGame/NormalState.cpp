@@ -15,10 +15,6 @@ const std::string NormalState::s_normalID = "NORMAL";
 
 NormalState::NormalState() {
     std::cout << "NormalState::NormalState() normal state constructor\n";
-    _tileWidth = Game::Instance()->getTileMap()->getTileSize().width;
-    _tileHeight = Game::Instance()->getTileMap()->getTileSize().height;
-    _mapWidth = Game::Instance()->getTileMap()->getMapSize().width;
-    _mapHeight = Game::Instance()->getTileMap()->getMapSize().height;
 }
 
 NormalState::~NormalState() {
@@ -34,6 +30,11 @@ void NormalState::stateUpdate() {
 }
 
 void NormalState::onInputEvent(CCPoint* diff) {
+
+    _tileWidth = Game::Instance()->getTileMap()->getTileSize().width;
+    _tileHeight = Game::Instance()->getTileMap()->getTileSize().height;
+    _mapWidth = Game::Instance()->getTileMap()->getMapSize().width;
+    _mapHeight = Game::Instance()->getTileMap()->getMapSize().height;
     
     Player* player = dynamic_cast<Player*>( Game::Instance()->findGameObject("player"));
     CCPoint playerPos = player->getPosition();
