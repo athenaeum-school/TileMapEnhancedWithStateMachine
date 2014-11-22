@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TileGameTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>EB1C8E921755386400198623</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EBB969E01A20572000318C5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

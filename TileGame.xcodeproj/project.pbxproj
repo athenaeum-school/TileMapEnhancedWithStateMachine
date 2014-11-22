@@ -280,10 +280,33 @@
 		EBB07D5B1A1674DD007A5A17 /* AlarmState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBB07D591A1674DD007A5A17 /* AlarmState.cpp */; };
 		EBB07D5E1A1674ED007A5A17 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBB07D5C1A1674ED007A5A17 /* StateMachine.cpp */; };
 		EBB07D611A167E7B007A5A17 /* ObjectManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBB07D5F1A167E7B007A5A17 /* ObjectManager.cpp */; };
+		EBB969E41A20572000318C5B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBB969E31A20572000318C5B /* main.cpp */; };
+		EBB969E61A20572100318C5B /* TileGameTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBB969E51A20572100318C5B /* TileGameTest.1 */; };
+		EBB969EB1A20580200318C5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB969EA1A20580200318C5B /* QuartzCore.framework */; };
+		EBB969ED1A20589900318C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB969EC1A20589900318C5B /* Foundation.framework */; };
+		EBB969EF1A2058B200318C5B /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB969EE1A2058B200318C5B /* OpenAL.framework */; };
+		EBB969F01A20595900318C5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1C8EA41755386400198623 /* CoreGraphics.framework */; };
+		EBB969F11A20595B00318C5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1C8EA01755386400198623 /* UIKit.framework */; };
+		EBB969F21A20595E00318C5B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1C8E9E1755386400198623 /* AVFoundation.framework */; };
+		EBB969F31A20596000318C5B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1C8E9C1755386400198623 /* AudioToolbox.framework */; };
+		EBB969F41A20596200318C5B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1C8E981755386400198623 /* OpenGLES.framework */; };
 		EBF12C851A1B0A28008438A0 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF12C831A1B0A28008438A0 /* GameObject.cpp */; };
 		EBF12C881A1B0B28008438A0 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF12C861A1B0B28008438A0 /* Player.cpp */; };
 		EBF12C8B1A1B0B36008438A0 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF12C891A1B0B36008438A0 /* Enemy.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBB969DF1A20572000318C5B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				EBB969E61A20572100318C5B /* TileGameTest.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EB1C8E931755386400198623 /* TileGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TileGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -869,6 +892,12 @@
 		EBB07D5D1A1674ED007A5A17 /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
 		EBB07D5F1A167E7B007A5A17 /* ObjectManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectManager.cpp; sourceTree = "<group>"; };
 		EBB07D601A167E7B007A5A17 /* ObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectManager.h; sourceTree = "<group>"; };
+		EBB969E11A20572000318C5B /* TileGameTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TileGameTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB969E31A20572000318C5B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EBB969E51A20572100318C5B /* TileGameTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TileGameTest.1; sourceTree = "<group>"; };
+		EBB969EA1A20580200318C5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		EBB969EC1A20589900318C5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EBB969EE1A2058B200318C5B /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
 		EBF12C831A1B0A28008438A0 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
 		EBF12C841A1B0A28008438A0 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		EBF12C861A1B0B28008438A0 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
@@ -895,6 +924,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB969DE1A20572000318C5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB969F01A20595900318C5B /* CoreGraphics.framework in Frameworks */,
+				EBB969EF1A2058B200318C5B /* OpenAL.framework in Frameworks */,
+				EBB969ED1A20589900318C5B /* Foundation.framework in Frameworks */,
+				EBB969EB1A20580200318C5B /* QuartzCore.framework in Frameworks */,
+				EBB969F41A20596200318C5B /* OpenGLES.framework in Frameworks */,
+				EBB969F31A20596000318C5B /* AudioToolbox.framework in Frameworks */,
+				EBB969F21A20595E00318C5B /* AVFoundation.framework in Frameworks */,
+				EBB969F11A20595B00318C5B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -902,6 +946,7 @@
 			isa = PBXGroup;
 			children = (
 				EB1C8EA61755386400198623 /* TileGame */,
+				EBB969E21A20572000318C5B /* TileGameTest */,
 				EB1C8E951755386400198623 /* Frameworks */,
 				EB1C8E941755386400198623 /* Products */,
 			);
@@ -911,6 +956,7 @@
 			isa = PBXGroup;
 			children = (
 				EB1C8E931755386400198623 /* TileGame.app */,
+				EBB969E11A20572000318C5B /* TileGameTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -918,6 +964,9 @@
 		EB1C8E951755386400198623 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBB969EE1A2058B200318C5B /* OpenAL.framework */,
+				EBB969EC1A20589900318C5B /* Foundation.framework */,
+				EBB969EA1A20580200318C5B /* QuartzCore.framework */,
 				EB1C8E961755386400198623 /* QuartzCore.framework */,
 				EB1C8E981755386400198623 /* OpenGLES.framework */,
 				EB1C8E9A1755386400198623 /* OpenAL.framework */,
@@ -2062,6 +2111,15 @@
 			path = Resources/TileGameResources;
 			sourceTree = "<group>";
 		};
+		EBB969E21A20572000318C5B /* TileGameTest */ = {
+			isa = PBXGroup;
+			children = (
+				EBB969E31A20572000318C5B /* main.cpp */,
+				EBB969E51A20572100318C5B /* TileGameTest.1 */,
+			);
+			path = TileGameTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2081,6 +2139,23 @@
 			productName = TileGame;
 			productReference = EB1C8E931755386400198623 /* TileGame.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EBB969E01A20572000318C5B /* TileGameTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB969E91A20572100318C5B /* Build configuration list for PBXNativeTarget "TileGameTest" */;
+			buildPhases = (
+				EBB969DD1A20572000318C5B /* Sources */,
+				EBB969DE1A20572000318C5B /* Frameworks */,
+				EBB969DF1A20572000318C5B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TileGameTest;
+			productName = TileGameTest;
+			productReference = EBB969E11A20572000318C5B /* TileGameTest */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -2103,6 +2178,7 @@
 			projectRoot = "";
 			targets = (
 				EB1C8E921755386400198623 /* TileGame */,
+				EBB969E01A20572000318C5B /* TileGameTest */,
 			);
 		};
 /* End PBXProject section */
@@ -2391,6 +2467,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB969DD1A20572000318C5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB969E41A20572000318C5B /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -2508,6 +2592,76 @@
 			};
 			name = Release;
 		};
+		EBB969E71A20572100318C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EBB969E81A20572100318C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2528,6 +2682,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EBB969E91A20572100318C5B /* Build configuration list for PBXNativeTarget "TileGameTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB969E71A20572100318C5B /* Debug */,
+				EBB969E81A20572100318C5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
