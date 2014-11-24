@@ -7,6 +7,7 @@
 //
 
 #include "Player.h"
+#include <iostream>
 
 void Player::setPlayerPosition(cocos2d::CCPoint* diff, cocos2d::CCPoint playerPos,
                        float tileWidth, float tileHeight, float mapWidth, float mapHeight)
@@ -36,4 +37,8 @@ void Player::setPlayerPosition(cocos2d::CCPoint* diff, cocos2d::CCPoint playerPo
             this->setPosition(playerPos);
         }
     }
+}
+
+void Player::stateUpdate(){
+    std::cout << "Update for the player.";
 }

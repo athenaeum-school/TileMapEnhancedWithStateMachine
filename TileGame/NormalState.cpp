@@ -28,6 +28,7 @@ void NormalState::stateUpdate() {
         // 人工知能的な動作については
         // Game::Instance()->getStateMachine()->changeState(new AlarmState());
         // をお使いください。
+        (*it)->stateUpdate();
     }
 }
 

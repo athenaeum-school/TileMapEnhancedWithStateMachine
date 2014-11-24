@@ -7,3 +7,7 @@
 //
 
 #include "Enemy.h"
+
+void Enemy::stateUpdate(){
+    std::cout << "Update for the enemy.";
+}

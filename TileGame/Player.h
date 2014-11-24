@@ -18,6 +18,7 @@ class Player : public GameObject
 public:
     void setPlayerPosition(cocos2d::CCPoint* diff, cocos2d::CCPoint playerPos,
                            float tileWidth, float tileHeight, float mapWidth, float mapHeight);
+    virtual void stateUpdate();
 };
 
 #endif /* defined(__TileGame__Player__) */

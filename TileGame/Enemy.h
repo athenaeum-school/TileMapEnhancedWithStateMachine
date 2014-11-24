@@ -14,6 +14,8 @@
 
 class Enemy : public GameObject
 {
+public:
+        virtual void stateUpdate();
     
 };
 

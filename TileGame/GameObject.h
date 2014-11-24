@@ -16,6 +16,7 @@ class GameObject : public cocos2d::CCSprite
 {
 public:
     //virtual void setStrategy();
+    virtual void stateUpdate() = 0;
 private:
     //std::string strategy;
     
