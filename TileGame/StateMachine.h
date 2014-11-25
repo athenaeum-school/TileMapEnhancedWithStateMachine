@@ -23,6 +23,7 @@ public:
     void popState();
     void update();
     void onEvent(CCPoint * pts);
+    void clean();
     
 protected:
 private:

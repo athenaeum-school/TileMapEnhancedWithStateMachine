@@ -25,6 +25,7 @@ m_bLevelComplete(false) // m_bLevelComplete変数をfalseに初期化します�
 
 ObjectManager::~ObjectManager()
 {
+    delete m_pStateMachine;
 }
 
 bool ObjectManager::init()
@@ -104,7 +105,7 @@ void ObjectManager::handleEvents(CCPoint* pts)
 void ObjectManager::clean()
 {
     cout << "cleaning ObjectManager\n";
-    //m_pStateMachine->clean();
+    m_pStateMachine->clean();
     m_pStateMachine = 0;
     delete m_pStateMachine;
 

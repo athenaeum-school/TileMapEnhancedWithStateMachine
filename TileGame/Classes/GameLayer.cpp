@@ -73,7 +73,7 @@ bool GameLayer::init()
     _player = new Player();
     _player->initWithFile("Player.png");
     _player->setPosition(ccp(x,y));
-    _player->retain();
+    _player->autorelease();
     //_player->setTag(normalStatus);
     
     this->addChild(_player);

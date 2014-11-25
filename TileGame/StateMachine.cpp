@@ -13,7 +13,11 @@ StateMachine::StateMachine() {
 }
 
 StateMachine::~StateMachine() {
-    
+
+}
+
+void StateMachine::clean(){
+    //
 }
 
 void StateMachine::pushState(GameState* pState) {
