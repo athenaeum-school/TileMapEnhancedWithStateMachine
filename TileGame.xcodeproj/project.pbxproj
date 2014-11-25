@@ -869,8 +869,6 @@
 		EBB07D5D1A1674ED007A5A17 /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
 		EBB07D5F1A167E7B007A5A17 /* ObjectManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectManager.cpp; sourceTree = "<group>"; };
 		EBB07D601A167E7B007A5A17 /* ObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectManager.h; sourceTree = "<group>"; };
-		EBB969E31A20572000318C5B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		EBB969E51A20572100318C5B /* TileGameTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TileGameTest.1; sourceTree = "<group>"; };
 		EBB969EC1A20589900318C5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EBB969EE1A2058B200318C5B /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
 		EBF12C831A1B0A28008438A0 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
@@ -906,7 +904,6 @@
 			isa = PBXGroup;
 			children = (
 				EB1C8EA61755386400198623 /* TileGame */,
-				EBB969E21A20572000318C5B /* TileGameTest */,
 				EB1C8E951755386400198623 /* Frameworks */,
 				EB1C8E941755386400198623 /* Products */,
 			);
@@ -2067,15 +2064,6 @@
 			);
 			name = TileGameResources;
 			path = Resources/TileGameResources;
-			sourceTree = "<group>";
-		};
-		EBB969E21A20572000318C5B /* TileGameTest */ = {
-			isa = PBXGroup;
-			children = (
-				EBB969E31A20572000318C5B /* main.cpp */,
-				EBB969E51A20572100318C5B /* TileGameTest.1 */,
-			);
-			path = TileGameTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

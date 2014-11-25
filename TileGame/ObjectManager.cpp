@@ -25,7 +25,8 @@ m_bLevelComplete(false) // m_bLevelComplete変数をfalseに初期化します�
 
 ObjectManager::~ObjectManager()
 {
-    delete m_pStateMachine;
+    //delete m_pStateMachine;
+    clean();
 }
 
 bool ObjectManager::init()
