@@ -39,6 +39,9 @@ void Player::setPlayerPosition(cocos2d::CCPoint* diff, cocos2d::CCPoint playerPo
     }
 }
 
+//
 void Player::stateUpdate(){
+    //基本的にPlayerの動作・処理はこの中で定義・宣言してください。
+    //setPlayerPosition(cocos2d::CCPoint* diff, cocos2d::CCPoint playerPos,float tileWidth, float tileHeight, float mapWidth, float mapHeight)
     std::cout << "Update for the player.";
 }

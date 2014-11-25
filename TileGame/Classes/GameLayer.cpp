@@ -124,6 +124,7 @@ bool GameLayer::ccTouchBegan(CCTouch *touch, CCEvent *event)
     return true;
 }
 
+// 衝突判定をしています。今は衝突判定は無効なので、状態マシンに組み入れてみてください。
 void GameLayer::setPlayerPosition(CCPoint position)
 {
     CCPoint tileCoord = this->tileCoordForPosition(position);

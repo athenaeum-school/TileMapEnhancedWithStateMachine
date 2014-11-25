@@ -29,9 +29,13 @@ void NormalState::stateUpdate() {
         // Game::Instance()->getStateMachine()->changeState(new AlarmState());
         // をお使いください。
         (*it)->stateUpdate();
+        //iterator のitは、ベクターの要素である、gameObjectsポインタ変数へのポインターなので、
+        //ポインタのデータを「*」で取り出しましょう。
     }
 }
 
+// 入力時にだけ処理させたい場合（＝毎フレーム更新は避けたい場合）。
+// 基本的にはstateUpdate()関数を使うようにしましょう。
 void NormalState::onInputEvent(CCPoint* diff) {
 
     _tileWidth = Game::Instance()->getTileMap()->getTileSize().width;

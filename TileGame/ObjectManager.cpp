@@ -12,12 +12,12 @@
 
 using namespace std;
 
-ObjectManager* ObjectManager::s_pInstance = 0;
+ObjectManager* ObjectManager::s_pInstance = 0; //インスタンスを格納する変数です。
 
 ObjectManager::ObjectManager():
-m_pStateMachine(0),
-m_playerLives(3),
-m_bLevelComplete(false)
+m_pStateMachine(0), // m_pStateMachine変数を０に初期化します。
+m_playerLives(3), // m_plyaerLives変数を3に初期化します。
+m_bLevelComplete(false) // m_bLevelComplete変数をfalseに初期化します。
 {
     m_pStateMachine = new StateMachine();
     m_currentLevel = 1;
@@ -64,6 +64,7 @@ void ObjectManager::addGameObject(GameObject* sprite)
 
 void ObjectManager::addGameObjectMap(const std::string id, GameObject* sprite)
 {
+    // Map（C#でのDictionaryみたいなものです）を使う必要がある場合は、参考にしてください。
     m_gameObjectMap.insert(pair<std::string, GameObject*>(id, sprite));
 }
 
@@ -74,6 +75,7 @@ std::vector<GameObject*> ObjectManager::getGameObjects()
 
 GameObject* ObjectManager::findGameObject(std::string id)
 {
+    // タグでの検索は負荷があるので、基本使わないようにしましょう。実験目的での使用ならいいです。
     std::map<std::string, GameObject*>::iterator it = m_gameObjectMap.find(id);
     if(it != m_gameObjectMap.end()){
         return it->second;
